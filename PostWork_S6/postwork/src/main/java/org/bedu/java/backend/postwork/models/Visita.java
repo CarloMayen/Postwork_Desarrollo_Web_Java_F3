@@ -9,6 +9,9 @@ import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.PositiveOrZero;
 import jakarta.validation.constraints.Size;
 
+@Data
+@Builder
+@RequiredArgsConstructor
 public class Visita {
     @PositiveOrZero(message = "ID should be positive")
     private Long id;

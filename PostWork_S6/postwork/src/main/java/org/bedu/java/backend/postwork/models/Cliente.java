@@ -6,6 +6,9 @@ import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.PositiveOrZero;
 
+@Data
+@Builder
+@RequiredArgsConstructor
 public class Cliente {
     @PositiveOrZero(message = "ID should be positive")
     private Long id;

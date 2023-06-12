@@ -9,6 +9,9 @@ import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.PastOrPresent;
 import jakarta.validation.constraints.PositiveOrZero;
 
+@Data
+@Builder
+@RequiredArgsConstructor
 public class Venta {
     @PositiveOrZero(message = "ID should be positive")
     private Long id;

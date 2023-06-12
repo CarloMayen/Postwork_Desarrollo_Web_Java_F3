@@ -4,6 +4,9 @@ import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Positive;
 import jakarta.validation.constraints.PositiveOrZero;
 
+@Data
+@Builder
+@RequiredArgsConstructor
 public class Etapa {
     @PositiveOrZero(message = "ID should be positive")
     private Long id;
