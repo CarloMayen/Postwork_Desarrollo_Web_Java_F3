@@ -1,0 +1,148 @@
+= Curso de Java Backend en Bedu
+Equipo 8
+:doctype: book
+:icons: font
+:source-highlighter: highlightjs
+:toc: left
+:toclevels: 4
+:sectlinks:
+:sectnums:
+
+[[resumen]]
+= Resumen
+Este curso muestra el desarrollo de un API usando Spring Framework, con sus módulos Spring Boot, Spring Data JPA y Spring REST Docs.
+
+
+[[verbos-http]]
+== Verbos HTTP
+
+Este curso trate de adherirse lo más posible al estándar RESTful aprovechando las capacidades del protocolo de HTTP
+y siguiendo las convenciones HTTP en su uso de los verbos HTTP.
+
+|===
+| Verbo | Uso
+
+| `GET`
+| Recuperar un recurso
+
+| `POST`
+| Crea un nuevo recurso
+
+| `PUT`
+| Actualizar un recurso existente, incluyendo actualizaciones parciales
+
+| `DELETE`
+| Eliminar un recurso existente
+|===
+
+Este curso trate de adherirse lo más posible al estándar RESTful en el uso de los códigos de estátus HTTP.
+
+|===
+| Code | uso
+
+| `200 OK`
+| La petición se completó exitosamente
+
+| `201 Created`
+| Se creó un nuevo recurso. La URL del reurso está disponible en la cabecera `Location` de la respuesta
+
+| `204 No Content`
+| Se aplicó correctamente la actualización de un recurso
+
+| `400 Bad Request`
+| La petición está formada de forma incorrecta. El cuerpo de la respuesta incluirá el error, proporcionando más información
+
+| `404 Not Found`
+| El recurso especificado no existe
+|===
+
+
+[[clientes]]
+== Clientes
+
+
+=== Get cliente por Id
+Obtiene un cliente específico usando su identificador único.
+
+==== Ejemplo de petición
+include::{snippets}/clientes/findById/http-request.adoc[]
+
+==== Ejemplo de respuesta
+include::{snippets}/clientes/findById/http-response.adoc[]
+
+==== Ejemplo usando CURL
+include::{snippets}/clientes/findById/curl-request.adoc[]
+
+==== Parámetros de la petición
+include::{snippets}/clientes/findById/request-body.adoc[]
+
+==== Parámetros de la respuesta
+include::{snippets}/clientes/findById/response-body.adoc[]
+
+
+=== Get clientes
+Obtiene todos los clientes.
+
+==== Ejemplo de petición
+include::{snippets}/clientes/findAll/http-request.adoc[]
+
+==== Ejemplo de respuesta
+include::{snippets}/clientes/findAll/http-response.adoc[]
+
+==== Ejemplo usando CURL
+include::{snippets}/clientes/findAll/curl-request.adoc[]
+
+==== Parámetros de la petición
+include::{snippets}/clientes/findAll/request-body.adoc[]
+
+==== Parámetros de la respuesta
+include::{snippets}/clientes/findAll/response-body.adoc[]
+
+
+
+=== POST nuevo cliente
+Crea un nuevo cliente
+
+==== Ejemplo de petición
+include::{snippets}/clientes/create/http-request.adoc[]
+
+==== Ejemplo de respuesta
+include::{snippets}/clientes/create/http-response.adoc[]
+
+==== Ejemplo usando CURL
+include::{snippets}/clientes/create/curl-request.adoc[]
+
+==== Parámetros de la petición
+include::{snippets}/clientes/create/request-body.adoc[]
+
+
+
+
+=== PUT  cliente
+Actualiza un cliente existente.
+
+==== Ejemplo de petición
+include::{snippets}/clientes/update/http-request.adoc[]
+
+==== Ejemplo de respuesta
+include::{snippets}/clientes/update/http-response.adoc[]
+
+==== Ejemplo usando CURL
+include::{snippets}/clientes/update/curl-request.adoc[]
+
+==== Parámetros de la petición
+include::{snippets}/clientes/update/request-body.adoc[]
+
+
+
+=== DELETE  cliente
+Elimina un cliente existente.
+
+==== Ejemplo de petición
+include::{snippets}/clientes/delete/http-request.adoc[]
+
+==== Ejemplo de respuesta
+include::{snippets}/clientes/delete/http-response.adoc[]
+
+==== Ejemplo usando CURL
+include::{snippets}/clientes/delete/curl-request.adoc[]
